@@ -1,86 +1,100 @@
 #include <stdio.h>
 
-//Super Trunfo - Cidades
 int main() {
-	char estado[1];
-	char estado1[1];
-	char codigo[3];
-	char codigo1[3];
-	char nome[30];
-	char nome1[30];
-	float populacao;
-	float populacao1;
-	float area;
-	float area1;
-	float pib;
-	float pib1;
-	int turismo;
-	int turismo1;
+	//Variáveis
+	char estadoA, estadoB;
+	char codigoA[3], codigoB[3];
+	char nomeA[30], nomeB[30];
+	float populacaoA, populacaoB;
+	float areaA, areaB;
+	float pibA, pibB;
+	int turisticosA, turisticosB;
+	float densidadeA, densidadeB;
+	float pib_captaA, pib_captaB;
 
+	//Formulario Carta 1
 	printf("Carta 1\n");
 
 	printf("Estado: ");
-	scanf("%s", &estado);
+	scanf("%c", &estadoA);
 
 	printf("Código: ");
-	scanf("%s", &codigo);
+	scanf("%s", &codigoA);
 
-	printf("Nome da Cidade: ");
-	scanf("%s", &nome);
-	
+	printf("Nome: ");
+	scanf("&s", &nomeA);
+
 	printf("População: ");
-	scanf("%f", &populacao);
+	scanf("%f", &populacaoA);
 
 	printf("Área: ");
-	scanf("%f", &area);
+	scanf("%f", &areaA);
 
 	printf("PIB: ");
-	scanf("%f", &pib);
+	scanf("%f", &pibA);
 
-	printf("Turismo: ");
-	scanf("%d", &turismo);
+	printf("Pontos Turisticos: ");
+	scanf("%d", &turisticosA);
 
+	//Calculo Densidade e PIB per capta Carta 1
+	densidadeA = (populacaoA / areaA);
+	pib_captaA = (pibA / populacaoA);
+
+	//Formulario Carta 2
 	printf("Carta 2\n");
 
 	printf("Estado: ");
-	scanf("%s", &estado1);
+	scanf("%c", &estadoB);
 
 	printf("Código: ");
-	scanf("%s", &codigo1);
+	scanf("%s", &codigoB);
 
-	printf("Nome da Cidade: ");
-	scanf("%s", &nome1);
-	
+	printf("Nome: ");
+	scanf("&s", &nomeB);
+
 	printf("População: ");
-	scanf("%f", &populacao);
+	scanf("%f", &populacaoB);
 
 	printf("Área: ");
-	scanf("%f", &area1);
+	scanf("%f", &areaB);
 
 	printf("PIB: ");
-	scanf("%f", &pib1);
+	scanf("%f", &pibB);
 
-	printf("Turismo: ");
-	scanf("%d", &turismo1);
-	
+	printf("Pontos Turisticos: ");
+	scanf("%d", &turisticosB);
+
+	//Calculo Densidade e PIB per capta Carta 2
+	densidadeB = (populacaoB / areaB);
+	pib_captaB = (pibB / populacaoB);
+
 	printf("\n---\n");
+
+	//Saida Carta 1
 	printf("Carta 1\n");
-	printf("Estado: %s\n", estado);
-	printf("Código: %s\n", codigo);
-	printf("Nome da Cidade: %s\n", nome);
-	printf("População: %.3f\n", populacao);
-	printf("Área: %.3f\n", area);
-	printf("PIB: %.3f\n", pib);
-	printf("Turismo: %d\n", turismo1);
-	printf("\n");
+	printf("Estado: %c\n", estadoA);
+	printf("Código: %s\n", codigoA);
+	printf("Nome da cidade: %s\n", nomeA);
+	printf("População: %f\n", populacaoA);
+	printf("Area: %.3f\n", areaA);
+	printf("PIB: %.3f\n", pibA);
+	printf("Pontos turísticos: %d\n", turisticosA);
+	printf("Densidade populacional: %.3f\n", densidadeA);
+	printf("PIB per capta: %.3f\n", pib_captaA);
+
+	printf("\n---\n");
+
+	//Saida Carta 2
 	printf("Carta 2\n");
-	printf("Estado: %s\n", estado1);
-	printf("Código: %s\n", codigo1);
-	printf("Nome da Cidade: %s\n", nome1);
-	printf("População: %.3f\n", populacao1);
-	printf("Área: %.3f\n", area1);
-	printf("PIB: %.3f\n", pib1);
-	printf("Turismo: %d\n", turismo1);
-	
-	return 0;
+	printf("Estado: %c\n", estadoB);
+	printf("Código: %s\n", codigoB);
+	printf("Nome da cidade: %s\n", nomeB);
+	printf("População: %f\n", populacaoB);
+	printf("Area: %.3f\n", areaB);
+	printf("PIB: %.3f\n", pibB);
+	printf("Pontos turísticos: %d\n", turisticosB);
+	printf("Densidade populacional: %.3f\n", densidadeB);
+	printf("PIB per capta: %.3f\n", pib_captaB);
+
+	return(0);
 }
