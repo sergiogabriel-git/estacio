@@ -22,7 +22,7 @@ int main() {
 	scanf("%s", &codigoA);
 
 	printf("Nome: ");
-	scanf("&s", &nomeA);
+	scanf("%s", &nomeA);
 
 	printf("População: ");
 	scanf("%f", &populacaoA);
@@ -50,7 +50,7 @@ int main() {
 	scanf("%s", &codigoB);
 
 	printf("Nome: ");
-	scanf("&s", &nomeB);
+	scanf("%s", &nomeB);
 
 	printf("População: ");
 	scanf("%f", &populacaoB);
