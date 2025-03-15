@@ -2,7 +2,8 @@
 
 int main() {
 	//Variáveis
-	char estadoA, estadoB;
+	unsigned char estadoA;
+	unsigned char estadoB;
 	char codigoA[3], codigoB[3];
 	char nomeA[30], nomeB[30];
 	float populacaoA, populacaoB;
@@ -17,7 +18,7 @@ int main() {
 	printf("Carta 1\n");
 
 	printf("Estado: ");
-	scanf("%c", &estadoA);
+	scanf("%uc", &estadoA);
 
 	printf("Código: ");
 	scanf("%s", &codigoA);
@@ -45,7 +46,7 @@ int main() {
 	printf("Carta 2\n");
 
 	printf("Estado: ");
-	scanf("%c", &estadoB);
+	scanf("%uc", &estadoB);
 
 	printf("Código: ");
 	scanf("%s", &codigoB);
@@ -77,10 +78,10 @@ int main() {
 
 	//Saida Carta 1
 	printf("Carta 1\n");
-	printf("Estado: %c\n", estadoA);
+	printf("Estado: %uc\n", estadoA);
 	printf("Código: %s\n", codigoA);
 	printf("Nome da cidade: %s\n", nomeA);
-	printf("População: %f\n", populacaoA);
+	printf("População: %3.f\n", populacaoA);
 	printf("Area: %.3f\n", areaA);
 	printf("PIB: %.3f\n", pibA);
 	printf("Pontos turísticos: %d\n", turisticosA);
@@ -91,10 +92,10 @@ int main() {
 
 	//Saida Carta 2
 	printf("Carta 2\n");
-	printf("Estado: %c\n", estadoB);
+	printf("Estado: %uc\n", estadoB);
 	printf("Código: %s\n", codigoB);
 	printf("Nome da cidade: %s\n", nomeB);
-	printf("População: %f\n", populacaoB);
+	printf("População: %.3f\n", populacaoB);
 	printf("Area: %.3f\n", areaB);
 	printf("PIB: %.3f\n", pibB);
 	printf("Pontos turísticos: %d\n", turisticosB);
@@ -102,7 +103,7 @@ int main() {
 	printf("PIB per capta: %.3f\n", pib_captaB);
 
 	//Comparação Carta 1 e Carta2
-	printf("---\n");
+	printf("--*--*--*--*--*--*--*--\n");
 	printf("Comparação de Cartas\n");
 	printf("População: Carta 1 venceu (%d)\n", (populacaoA > populacaoB));
 	printf("Área: Carta 1 venceu (%d)\n", (areaA > areaB));
