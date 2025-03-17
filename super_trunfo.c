@@ -2,8 +2,7 @@
 
 int main() {
 	//Variáveis
-	unsigned char estadoA;
-	unsigned char estadoB;
+	char estadoA[1], estadoB[1];
 	char codigoA[3], codigoB[3];
 	char nomeA[30], nomeB[30];
 	float populacaoA, populacaoB;
@@ -13,29 +12,30 @@ int main() {
 	float densidadeA, densidadeB;
 	float pib_captaA, pib_captaB;
 	float super_poderA, super_poderB;
+	unsigned char atributo;
 
 	//Formulario Carta 1
 	printf("Carta 1\n");
 
-	printf("Estado: ");
-	scanf("%uc", &estadoA);
+	printf("Estado:\n");
+	scanf("%s", &estadoA);
 
-	printf("Código: ");
+	printf("Código:\n");
 	scanf("%s", &codigoA);
 
-	printf("Nome: ");
+	printf("Nome:\n");
 	scanf("%s", &nomeA);
 
-	printf("População: ");
+	printf("População:\n");
 	scanf("%f", &populacaoA);
 
-	printf("Área: ");
+	printf("Área:\n");
 	scanf("%f", &areaA);
 
-	printf("PIB: ");
+	printf("PIB:\n");
 	scanf("%f", &pibA);
 
-	printf("Pontos Turisticos: ");
+	printf("Pontos Turisticos:\n");
 	scanf("%d", &turisticosA);
 
 	//Calculo Densidade e PIB per capta Carta 1
@@ -45,25 +45,25 @@ int main() {
 	//Formulario Carta 2
 	printf("Carta 2\n");
 
-	printf("Estado: ");
-	scanf("%uc", &estadoB);
+	printf("Estado:\n");
+	scanf("%s", &estadoB);
 
-	printf("Código: ");
+	printf("Código:\n");
 	scanf("%s", &codigoB);
 
-	printf("Nome: ");
+	printf("Nome:\n");
 	scanf("%s", &nomeB);
 
-	printf("População: ");
+	printf("População:\n");
 	scanf("%f", &populacaoB);
 
-	printf("Área: ");
+	printf("Área:\n");
 	scanf("%f", &areaB);
 
-	printf("PIB: ");
+	printf("PIB:\n");
 	scanf("%f", &pibB);
 
-	printf("Pontos Turisticos: ");
+	printf("Pontos Turisticos:\n");
 	scanf("%d", &turisticosB);
 
 	//Calculo Densidade e PIB per capta Carta 2
@@ -78,10 +78,10 @@ int main() {
 
 	//Saida Carta 1
 	printf("Carta 1\n");
-	printf("Estado: %uc\n", estadoA);
+	printf("Estado: %s\n", estadoA);
 	printf("Código: %s\n", codigoA);
 	printf("Nome da cidade: %s\n", nomeA);
-	printf("População: %3.f\n", populacaoA);
+	printf("População: %.3f\n", populacaoA);
 	printf("Area: %.3f\n", areaA);
 	printf("PIB: %.3f\n", pibA);
 	printf("Pontos turísticos: %d\n", turisticosA);
@@ -92,7 +92,7 @@ int main() {
 
 	//Saida Carta 2
 	printf("Carta 2\n");
-	printf("Estado: %uc\n", estadoB);
+	printf("Estado: %s\n", estadoB);
 	printf("Código: %s\n", codigoB);
 	printf("Nome da cidade: %s\n", nomeB);
 	printf("População: %.3f\n", populacaoB);
@@ -102,16 +102,63 @@ int main() {
 	printf("Densidade populacional: %.3f\n", densidadeB);
 	printf("PIB per capta: %.3f\n", pib_captaB);
 
-	//Comparação Carta 1 e Carta2
-	printf("--*--*--*--*--*--*--*--\n");
-	printf("Comparação de Cartas\n");
-	printf("População: Carta 1 venceu (%d)\n", (populacaoA > populacaoB));
-	printf("Área: Carta 1 venceu (%d)\n", (areaA > areaB));
-	printf("PIB: Carta 1 venceu (%d)\n", (pibA > pibB));
-	printf("Pontos Turísticos: Carta 1 venceu (%d)\n", (turisticosA > turisticosB));
-	printf("Densidade Populacional: Carta 1 venceu (%d)\n", (densidadeA < densidadeB));
-	printf("PIB per capta: Carta 1 venceu (%d)\n", (pib_captaA > pib_captaB));
-	printf("Super Poder: Carta 1 venceu (%d)\n", (super_poderA > super_poderB));
+        printf("*-*-*-*-*\n");
+
+	//Comparação
+	printf("Atributo de comparação\n(0)População\n(1)Área\n(2)PIB\n(3)Pontos Turísticos\n(4)Densidade\n(5)PIB per Capta\n(6)Super Poder:\n");
+	scanf("%u", &atributo);
+	
+	if(atributo == 0) {
+	  if(populacaoA > populacaoB) {
+	    printf("Carta 1 vence!\n");
+	  } else {
+	    printf("Carta 2 vence!\n");
+	  }
+	}
+	else if(atributo == 1) {
+	  if(areaA > areaB) {
+	    printf("Carta 1 vence!\n");
+	  } else {
+	    printf("Carta 2 vence!\n");
+	  }
+	}
+	else if(atributo == 2) {
+	  if(pibA > pibB) {
+	    printf("Carta 1 vence!\n");
+	  } else {
+	    printf("Carta 2 vence!\n");
+	  }
+	}
+	else if(atributo == 3) {
+	  if(turisticosA > turisticosB) {
+	    printf("Carta 1 vence!\n");
+	  } else {
+	    printf("Carta 2 vence!\n");
+	  }
+	}
+	else if(atributo == 4) {
+	  if(densidadeA > densidadeB) {
+	    printf("Carta 1 vence!\n");
+	  } else {
+	    printf("Carta 2 vence!\n");
+	  }
+	}
+	else if(atributo == 5) {
+	  if(pib_captaA > pib_captaB) {
+	    printf("Carta 1 vence!\n");
+	  } else {
+	    printf("Carta 2 vence!\n");
+	  }
+	} 
+	else if(atributo == 6) {
+	  if(super_poderA > super_poderB) {
+	    printf("Carta 1 vence!\n");
+	  } else {
+	    printf("Carta 2 vence!\n");
+	  }
+	} else {
+	  printf("Atributo indisponível.\n");
+	}
 
 	return(0);
 }
