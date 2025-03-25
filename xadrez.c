@@ -18,7 +18,7 @@ int main() {
     printf("Cima\n");
     printf("Direita\n");
     movimento_bispo++;
-    } while(movimento_bispo <= 5)
+    } while(movimento_bispo <= 5);
 
   //Movimento peça rainha 8 casas para direita
   printf("RAINHA\n");
