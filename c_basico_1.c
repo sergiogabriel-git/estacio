@@ -25,11 +25,16 @@ double circle_double(double raio) {
     return(raio * PI);
 }
 
-int main() {
+void main() {
     printf("%d\n", square(15,2));
     printf("%.2f\n", square_float(15.5,2.5));
     printf("%.5f\n", square_double(15.255,2.322));
     printf("%d\n", circle(15));
     printf("%.2f\n", circle_float(15.5));
     printf("%.5f\n", circle_double(15.255));
+
+    typedef unsigned int uint;
+
+    uint numero = 1000000;
+    printf("%u\n", numero);
 }
