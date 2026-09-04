@@ -1,35 +1,18 @@
+// Headers
 #include <stdio.h>
 #define PI 3.14159
 #define E 2.71828
 
-int square(int largura, int altura) {
-    return(largura * altura);
-}
+// Functions
+int square(int largura, int altura) { return(largura * altura); }
+float square_float(float largura, float altura) { return(largura * altura); }
+double square_double(double largura, double altura) { return(largura * altura); }
+int circle(int raio) { return(raio * PI); }
+float circle_float(float raio) { return(raio * PI); }
+double circle_double(double raio) { return(raio * PI); }
+int increment(int *num) { return ++(*num); }
 
-float square_float(float largura, float altura) {
-    return(largura * altura);
-}
-
-double square_double(double largura, double altura) {
-    return(largura * altura);
-}
-
-int circle(int raio) {
-    return(raio * PI);
-}
-
-float circle_float(float raio) {
-    return(raio * PI);
-}
-
-double circle_double(double raio) {
-    return(raio * PI);
-}
-
-int increment(int *num) {
-    return ++(*num);
-}
-
+// Main
 void main() {
     printf("%d\n", square(15,2));
     printf("%.2f\n", square_float(15.5,2.5));
