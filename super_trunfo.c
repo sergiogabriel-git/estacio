@@ -1,5 +1,7 @@
+// Header
 #include <stdio.h>
 
+// Main
 int main() {
 	//Variáveis
 	unsigned char estadoA;
