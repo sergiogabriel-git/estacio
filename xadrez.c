@@ -1,4 +1,7 @@
+// Header
 #include <stdio.h>
+
+// Main
 int main() {
   //Variaveis
   int movimento_torre = 1;
